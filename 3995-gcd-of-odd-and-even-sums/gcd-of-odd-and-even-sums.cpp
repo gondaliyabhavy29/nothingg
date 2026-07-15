@@ -1,7 +1,9 @@
-#include<bits/stdc++.h>
+
 class Solution {
 public:
     int gcdOfOddEvenSums(int n) {
-       return n;
+        int sumo=2*(n*(n+1)/2)-n;
+        int sume=2*(n*(n+1)/2);
+        return gcd(sumo,sume);
     }
 };
