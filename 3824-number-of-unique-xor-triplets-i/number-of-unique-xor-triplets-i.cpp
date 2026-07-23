@@ -2,6 +2,10 @@ class Solution {
 public:
     int uniqueXorTriplets(vector<int>& nums) {
         size_t n = nums.size();
-        return 1<<(bit_width(n)-3/(n+1));
+        if(n<=2)return n;
+       int ans=1;
+       while(ans<=n)ans<<=1;
+
+       return ans;
     }
 };
